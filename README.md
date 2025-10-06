@@ -23,3 +23,5 @@ To visualize the data for my project, I plan to use multiple forms of visualizer
 To test I plan to collect a number of songs that have charted to and songs that have not to determine what decides if a song will chart or not. I will then train a model to know the features and weights for determining what charts. Finally I will feed it new songs and its features to determine if that song will chart.
 #Test Change
 To test I plan to train my model on 2024 data of songs and predict whether or not songs chart on 2025 releases. By doing this, I will be learn what generally goes into a top charting song in 2024 and be able to predict how songs in 2025 will do.
+
+ReadMe with requested changes
