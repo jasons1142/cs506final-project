@@ -1,27 +1,12 @@
 # cs506final-project
 
-# Project Description
-For my project, I will be using Spotify and its features to predict if a new song will chart.
+# YouTube Link
+https://www.youtube.com/watch?v=y2IRj6gmKVw
 
-# Goals
-Predict if a song will chart based on the features Spotify allows its users to see
+# Midterm Report
 
-# Data Collection
-For my project, I will need to collect the audio features of the song I am trying to determine if it will chart. So things like danceability, loudness, duration. Data about the song; genre, release date, artist, features. How well songs did on the charts; position, when it entered the charts, when it left the charts.
-# Data Collection Change
-For data collection I will use spotify data of their top songs of 2024 along with the Kaggle dataset for most streamed songs in 2024.
+  I created preliminary visualizations to understand relationships between Spotify streaming data and Billboard chart performance. The correlation heatmap shows that Spotify Streams and Popularity are negatively correlated with Billboard Peak Position, meaning songs with higher streams tend to chart higher. The plot showing the relationship between streams and peak position on the Billboard chart also shows that songs with higher streams tend to do better on the charts.
+  I cleaned and processed the data by standardizing column names, converting date fields, and merging Spotify and Billboard data. My Spotify dataset had a large number of metrics, so I narrowed down the ones I used to metrics like Spotify streams, Spotify popularity, TikTok views, and YouTube views. My Billboard dataset had songs dating back all the way to 1958, so I used the year in the chart_week metric to only have songs that charted in 2024. I then merged the dataset by song title and artist name to create a dataset with things like Spotify Streams and YouTube views of a song linked to the song’s peak position on the Billboard charts.
+	I created a correlation heatmap to visualize the relationships between Spotify metrics and Billboard Peak Position. I then used a linear regression model to quantify how each Spotify feature influences chart position and evaluate predictive performance. Model performance was assessed using R² and Mean Absolute Error. 
+  My preliminary results show that there is a strong correlation between having higher Spotify streams and lower Billboard position (which is good because you are at the top of the charts). Things like high Spotify popularity and high YouTube Views also tend to indicate better performance on the charts. The linear regression model achieved an R² of 0.41 and a mean absolute error of 16, indicating that streams explain about 41% of the variance in peak chart position. Although not the best as this project progresses, I will add more metrics to better predict song placement.
 
-# Data Modeling
-To model the data, I plan to use logistic regression. By using logistic regression I will be able to give features a score and a weight in determining if they chart. Once they are scored and weighted I can calculate a probability and use that probability as a metric of whether a song charts or not.
-# Data modeling change
-To model the data I will use logistic regression and two other models.
-
-# Data Visualization
-To visualize the data for my project, I plan to use multiple forms of visualizers. I plan to use histograms to show the audio features that show up in songs that do chart compared to songs that do not chart. I plan to use a correlation matrix to show where songs with similar traits and features tend to land on the charts. I also plan to keep track of streams and time on a graph to see the listens a song is getting while it is charting and while it is not charting. 
-
-# Test
-To test I plan to collect a number of songs that have charted to and songs that have not to determine what decides if a song will chart or not. I will then train a model to know the features and weights for determining what charts. Finally I will feed it new songs and its features to determine if that song will chart.
-#Test Change
-To test I plan to train my model on 2024 data of songs and predict whether or not songs chart on 2025 releases. By doing this, I will be learn what generally goes into a top charting song in 2024 and be able to predict how songs in 2025 will do.
-
-ReadMe with requested changes
