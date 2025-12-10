@@ -10,3 +10,7 @@ https://www.youtube.com/watch?v=y2IRj6gmKVw
 	I created a correlation heatmap to visualize the relationships between Spotify metrics and Billboard Peak Position. I then used a linear regression model to quantify how each Spotify feature influences chart position and evaluate predictive performance. Model performance was assessed using R² and Mean Absolute Error. 
   My preliminary results show that there is a strong correlation between having higher Spotify streams and lower Billboard position (which is good because you are at the top of the charts). Things like high Spotify popularity and high YouTube Views also tend to indicate better performance on the charts. The linear regression model achieved an R² of 0.41 and a mean absolute error of 16, indicating that streams explain about 41% of the variance in peak chart position. Although not the best as this project progresses, I will add more metrics to better predict song placement.
 
+# How To Build and Run Code
+git clone 
+cd notebooks
+open 01_data_cleaning.ipynb
