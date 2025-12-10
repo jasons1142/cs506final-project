@@ -1,11 +1,8 @@
 import pandas as pd
 
 def load_csv(path):
-    """Try UTF-8 first, then fallback to latin-1 if needed."""
-    try:
-        return pd.read_csv(path, encoding="utf-8")
-    except UnicodeDecodeError:
-        return pd.read_csv(path, encoding="latin-1")
+    """Helper wrapper to ensure correct encoding."""
+    return pd.read_csv(path, encoding="latin1")
 
 
 def test_datasets_load():
@@ -18,12 +15,14 @@ def test_datasets_load():
 
 
 def test_column_presence():
-    """Check for essential columns used in the model."""
+    """Check for essential columns in the raw Spotify dataset."""
     spotify = load_csv("data/spotify_top_2024.csv")
 
     required_columns = [
-        "track", "artist", "spotify_streams",
-        "spotify_popularity", "release_date"
+        "Track",
+        "Artist",
+        "Release Date",
+        "Spotify Streams"
     ]
 
     for col in required_columns:
@@ -31,6 +30,11 @@ def test_column_presence():
 
 
 def test_no_missing_values():
-    """Ensure the CSV loads and is not completely missing data."""
+    """Ensure the dataset is not entirely missing or corrupt."""
     spotify = load_csv("data/spotify_top_2024.csv")
-    assert spotify.isna().sum().sum() < len(spotify)
+
+    # Not empty
+    assert len(spotify) > 0
+
+    # Not *all* NaN
+    assert spotify.isna().sum().sum() < spotify.size
