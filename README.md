@@ -12,9 +12,9 @@ https://www.youtube.com/watch?v=y2IRj6gmKVw
 
 # How To Build and Run Code
 # Clone the Repository
-git clone git@github.com:jasons1142/cs506final-project.git
-cd notebooks
-open 01_data_cleaning.ipynb
+git clone git@github.com:jasons1142/cs506final-project.git  
+cd notebooks  
+open 01_data_cleaning.ipynb  
 
 # Set up the Project
 make
