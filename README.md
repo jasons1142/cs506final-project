@@ -11,20 +11,20 @@ https://www.youtube.com/watch?v=y2IRj6gmKVw
   My preliminary results show that there is a strong correlation between having higher Spotify streams and lower Billboard position (which is good because you are at the top of the charts). Things like high Spotify popularity and high YouTube Views also tend to indicate better performance on the charts. The linear regression model achieved an R² of 0.41 and a mean absolute error of 16, indicating that streams explain about 41% of the variance in peak chart position. Although not the best as this project progresses, I will add more metrics to better predict song placement.
 
 # How To Build and Run Code
-# Clone the Repository
+## Clone the Repository
 git clone git@github.com:jasons1142/cs506final-project.git  
 cd notebooks  
 open 01_data_cleaning.ipynb  
 
-# Set up the Project
+## Set up the Project
 make
 
-# Run the Notebook
+## Run the Notebook
 make run
 
-# Run test
+## Run test
 make test
 
-# Clean Outputs
+## Clean Outputs
 make clean
 
