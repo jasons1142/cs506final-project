@@ -1,7 +1,7 @@
 # cs506final-project
 
 # YouTube Link
-https://www.youtube.com/watch?v=y2IRj6gmKVw
+[https://www.youtube.com/watch?v=y2IRj6gmKVw](https://www.youtube.com/watch?v=niR2s7nRRWw)
 
 # How To Build and Run Code
 ## Clone the Repository
